@@ -11,5 +11,5 @@ block content
     |  and outputs either a CSV or Geojson.
 
   div(class='btn-group')
-    a(href='/geojson' class='btn btn-lg') geojson
-    a(href='/csv' class='btn btn-lg') csv
+    a(href='/geojson' class='btn btn-lg' onClick="gtag('event', 'download', '', 'geojson');") geojson
+    a(href='/csv' class='btn btn-lg' onClick="gtag('event', 'download', '', 'csv');") csv
