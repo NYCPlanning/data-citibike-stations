@@ -28,7 +28,7 @@ router.get('/csv', function(req, res, next) {
     var last_updated = JSON.parse(body).last_updated;
     res.set({"Content-Disposition":`attachment; filename="stations${last_updated}.csv"`});
 
-    var stationsJSON = JSON.parse(body).stationBeanList;
+    var stationsJSON = JSON.parse(body).data.stations;
     var stationsCSV = jsonexport(stationsJSON, function(err, csv) {
       res.send(csv);
     });
