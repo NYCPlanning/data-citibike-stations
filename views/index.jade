@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Citibike Stations
+  p 
+    a(href='https://www.citibikenyc.com/system-data') Citibike publishes a lot of open data. 
+  p   
+    | But suprisingly, it's difficult to find a list of all stations in a common geospatial data type.
+    | This tiny app parses the 
+    a(href="https://gbfs.citibikenyc.com/gbfs/en/station_information.json") GBFS Station Information feed
+    |  and outputs either a CSV or Geojson.
+
+  div(class='btn-group')
+    a(href='/geojson' class='btn btn-lg') geojson
+    a(href='/csv' class='btn btn-lg') csv
